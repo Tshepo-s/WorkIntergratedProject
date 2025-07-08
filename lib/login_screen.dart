@@ -1,3 +1,4 @@
+import 'package:cutting_edge/home%20screen.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -92,17 +93,18 @@ class LoginScreen extends StatelessWidget {
       SizedBox(height: 40,),
 Text("Forgot Password?", style: TextStyle(color: Colors.grey),),
 SizedBox(height: 40,),
-Container(
-  height: 50,
-  margin: EdgeInsets.symmetric(horizontal: 50),
-  decoration: BoxDecoration(
-    borderRadius: BorderRadius.circular(50),
-    color: Colors.black,
-  ), 
-  child: Center(
-    child: Text("Login", style: TextStyle(color: Colors.white, fontSize: 18),),
-  ), 
-)     ],
+
+ElevatedButton(
+  
+  onPressed: (){
+    Navigator.push(context,MaterialPageRoute(builder:(context)=> Home_Screen()));
+  }, child: Text("Login",style: TextStyle(color: Colors.white),),
+  style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.black,))
+
+  )
+
+  ],
   ),
 ), 
   ), 
